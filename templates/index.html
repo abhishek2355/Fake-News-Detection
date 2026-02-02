@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Detection Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>AI Detection Hub</h1>
+        <p>Detect Fake News, AI Images, and Fake Audio/Video</p>
+    </header>
+
+    <main class="cards-container">
+        <a href="{{ url_for('check_news') }}" class="card">
+            <img src="{{ url_for('static', filename='images/Fake-News-Text-Detection.jpg') }}" alt="">
+            <h2>Fake News Detection</h2>
+            <p>Analyze text and detect whether it is fake or real.</p>
+        </a>
+
+        <a href="{{ url_for('check_image') }}" class="card">
+            <img src="{{ url_for('static', filename='images/AI-Image-Detector.jpg') }}" alt="AI Image">
+            <h2>AI Image Detection</h2>
+            <p>Check images for AI-generated manipulations.</p>
+        </a>
+
+        <a href="/fake-audio-video" class="card">
+            <img src="{{ url_for('static', filename='images/Fake-Audio-Video-Detection.jpg') }}" alt="Fake Audio/Video">
+            <h2>Fake Audio/Video Detection</h2>
+            <p>Detect deepfake audio or video content with AI tools.</p>
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AI Detection Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

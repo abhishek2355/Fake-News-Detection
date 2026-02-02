@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Check News - Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Check News Authenticity</h1>
+        <p class="subtitle"> Upload the news image below:</p>
+
+        <form method="post" enctype="multipart/form-data" class="upload-form">
+            <h3>Upload Image</h3>
+            <p class="hint">Supported formats: JPG, PNG</p>
+
+            <div class="upload-row">
+                <!-- File input -->
+                <label class="file-box">
+                    <input type="file"
+                        name="image"
+                        accept="image/*"
+                        required
+                        onchange="previewImage(event)">
+                    <span>Select Image</span>
+                </label>
+
+                <!-- Preview -->
+                <div class="preview-box">
+                    <img id="preview" src="" alt="Preview" />
+                    <span id="preview-text">No image selected</span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-primary">🔍 Detect AI Image</button>
+        </form>
+
+        <a href="{{ url_for('home') }}" class="back-link">← Back to Home</a>
+    </div>
+</body>
+
+<script>
+    function previewImage(event) {
+        const image = document.getElementById("preview");
+        const text = document.getElementById("preview-text");
+        image.src = URL.createObjectURL(event.target.files[0]);
+        image.style.display = "block";
+        text.style.display = "none";
+    }
+</script>
+</html>
