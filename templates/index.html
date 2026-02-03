@@ -26,10 +26,16 @@
             <p>Check images for AI-generated manipulations.</p>
         </a>
 
-        <a href="/fake-audio-video" class="card">
+        <a href="{{ url_for('check_audio') }}" class="card">
+            <img src="{{ url_for('static', filename='images/Fake-Audio-Detection.jpg') }}" alt="Fake Audio/Video">
+            <h2>Fake Audio Detection</h2>
+            <p>Detect deepfake audio content with AI tools.</p>
+        </a>
+
+        <a href="{{ url_for('check_video') }}" class="card">
             <img src="{{ url_for('static', filename='images/Fake-Audio-Video-Detection.jpg') }}" alt="Fake Audio/Video">
-            <h2>Fake Audio/Video Detection</h2>
-            <p>Detect deepfake audio or video content with AI tools.</p>
+            <h2>Fake Video Detection</h2>
+            <p>Detect deepfake video content with AI tools.</p>
         </a>
     </main>
 

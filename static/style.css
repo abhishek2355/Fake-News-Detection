@@ -318,6 +318,42 @@ footer {
     cursor: pointer;
 }
 
-.btn-primary:hover {
-    background: #1d4ed8;
+.upload-area {
+    border: 2px dashed rgba(255,255,255,0.4);
+    border-radius: 14px;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    background: rgba(0,255,213,0.1);
+    border-color: #00ffd5;
+}
+
+.upload-area input {
+    display: none;
+}
+
+.icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.file-label {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.supported-formats {
+    font-size: 12px;
+    color: #b5b5b5;
+}
+
+.analysis-details { 
+    background: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 15px; 
+    margin: 20px 0; 
+    text-align: left; 
 }
